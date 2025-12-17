@@ -3,9 +3,568 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma premiere page en HTML et css</title>
+    <title>Cours JavaScript pour Débutants</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>🚀 Cours JavaScript pour Débutants</h1>
+        <p>Apprends JavaScript de zéro avec des exemples pratiques !</p>
+    </header>
+
+    <nav>
+        <h2>Sommaire du cours</h2>
+        <ul>
+            <li><a href="#intro">1. Introduction à JavaScript</a></li>
+            <li><a href="#variables">2. Variables et Types de Données</a></li>
+            <li><a href="#operateurs">3. Opérateurs</a></li>
+            <li><a href="#conditions">4. Conditions (if/else)</a></li>
+            <li><a href="#boucles">5. Boucles (for, while)</a></li>
+            <li><a href="#fonctions">6. Fonctions</a></li>
+            <li><a href="#tableaux">7. Tableaux (Arrays)</a></li>
+            <li><a href="#objets">8. Objets</a></li>
+            <li><a href="#dom">9. Manipulation du DOM</a></li>
+            <li><a href="#evenements">10. Événements</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Chapitre 1 : Introduction -->
+        <section id="intro" class="chapter">
+            <h2>📘 Chapitre 1 : Introduction à JavaScript</h2>
+            <div class="content">
+                <h3>Qu'est-ce que JavaScript ?</h3>
+                <p>JavaScript est un langage de programmation qui permet de rendre les pages web interactives. C'est l'un des langages les plus populaires au monde !</p>
+
+                <h3>Où écrire du JavaScript ?</h3>
+                <ul>
+                    <li>Dans une balise <code>&lt;script&gt;</code> en HTML</li>
+                    <li>Dans un fichier externe <code>.js</code></li>
+                    <li>Dans la console du navigateur (F12)</li>
+                </ul>
+
+                <h3>Ton premier programme</h3>
+                <div class="code-example">
+                    <pre><code>// Afficher un message dans la console
+console.log("Hello, World!");
+
+// Afficher une alerte
+alert("Bienvenue dans le cours JavaScript !");</code></pre>
+                </div>
+
+                <button onclick="exercice1()">Tester l'exercice 1</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 2 : Variables -->
+        <section id="variables" class="chapter">
+            <h2>📦 Chapitre 2 : Variables et Types de Données</h2>
+            <div class="content">
+                <h3>Déclarer des variables</h3>
+                <p>En JavaScript, on peut déclarer des variables avec <code>let</code>, <code>const</code> ou <code>var</code>.</p>
+
+                <div class="code-example">
+                    <pre><code>// let : variable modifiable
+let prenom = "Alice";
+let age = 25;
+
+// const : constante (non modifiable)
+const PI = 3.14159;
+
+// Modifier une variable
+prenom = "Bob";
+age = 30;</code></pre>
+                </div>
+
+                <h3>Types de données</h3>
+                <div class="code-example">
+                    <pre><code>// String (texte)
+let nom = "Jean";
+
+// Number (nombre)
+let age = 25;
+let prix = 19.99;
+
+// Boolean (vrai/faux)
+let estEtudiant = true;
+let estMajeur = false;
+
+// Undefined (non défini)
+let variable;
+
+// Null (valeur nulle)
+let valeur = null;</code></pre>
+                </div>
+
+                <button onclick="exercice2()">Tester l'exercice 2</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 3 : Opérateurs -->
+        <section id="operateurs" class="chapter">
+            <h2>➕ Chapitre 3 : Opérateurs</h2>
+            <div class="content">
+                <h3>Opérateurs arithmétiques</h3>
+                <div class="code-example">
+                    <pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b);  // Addition : 15
+console.log(a - b);  // Soustraction : 5
+console.log(a * b);  // Multiplication : 50
+console.log(a / b);  // Division : 2
+console.log(a % b);  // Modulo (reste) : 0
+console.log(a ** b); // Puissance : 100000</code></pre>
+                </div>
+
+                <h3>Opérateurs de comparaison</h3>
+                <div class="code-example">
+                    <pre><code>let x = 10;
+let y = 5;
+
+console.log(x == y);   // Égalité : false
+console.log(x === y);  // Égalité stricte : false
+console.log(x != y);   // Différent : true
+console.log(x > y);    // Supérieur : true
+console.log(x < y);    // Inférieur : false
+console.log(x >= y);   // Supérieur ou égal : true</code></pre>
+                </div>
+
+                <h3>Opérateurs logiques</h3>
+                <div class="code-example">
+                    <pre><code>let estMajeur = true;
+let aPermis = false;
+
+// ET logique (&&)
+console.log(estMajeur && aPermis); // false
+
+// OU logique (||)
+console.log(estMajeur || aPermis); // true
+
+// NON logique (!)
+console.log(!estMajeur); // false</code></pre>
+                </div>
+
+                <button onclick="exercice3()">Tester l'exercice 3</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 4 : Conditions -->
+        <section id="conditions" class="chapter">
+            <h2>🔀 Chapitre 4 : Conditions (if/else)</h2>
+            <div class="content">
+                <h3>La structure if/else</h3>
+                <div class="code-example">
+                    <pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("Tu es majeur !");
+} else {
+    console.log("Tu es mineur !");
+}</code></pre>
+                </div>
+
+                <h3>if / else if / else</h3>
+                <div class="code-example">
+                    <pre><code>let note = 15;
+
+if (note >= 16) {
+    console.log("Très bien !");
+} else if (note >= 14) {
+    console.log("Bien !");
+} else if (note >= 10) {
+    console.log("Passable");
+} else {
+    console.log("Insuffisant");
+}</code></pre>
+                </div>
+
+                <h3>L'opérateur ternaire</h3>
+                <div class="code-example">
+                    <pre><code>let age = 20;
+let statut = age >= 18 ? "majeur" : "mineur";
+console.log(statut); // "majeur"</code></pre>
+                </div>
+
+                <button onclick="exercice4()">Tester l'exercice 4</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 5 : Boucles -->
+        <section id="boucles" class="chapter">
+            <h2>🔁 Chapitre 5 : Boucles</h2>
+            <div class="content">
+                <h3>Boucle for</h3>
+                <div class="code-example">
+                    <pre><code>// Compter de 1 à 5
+for (let i = 1; i <= 5; i++) {
+    console.log("Nombre : " + i);
+}</code></pre>
+                </div>
+
+                <h3>Boucle while</h3>
+                <div class="code-example">
+                    <pre><code>let compteur = 0;
+
+while (compteur < 5) {
+    console.log("Compteur : " + compteur);
+    compteur++;
+}</code></pre>
+                </div>
+
+                <h3>Boucle do...while</h3>
+                <div class="code-example">
+                    <pre><code>let nombre = 0;
+
+do {
+    console.log("Nombre : " + nombre);
+    nombre++;
+} while (nombre < 3);</code></pre>
+                </div>
+
+                <button onclick="exercice5()">Tester l'exercice 5</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 6 : Fonctions -->
+        <section id="fonctions" class="chapter">
+            <h2>⚙️ Chapitre 6 : Fonctions</h2>
+            <div class="content">
+                <h3>Déclarer une fonction</h3>
+                <div class="code-example">
+                    <pre><code>// Fonction simple
+function direBonjour() {
+    console.log("Bonjour !");
+}
+
+direBonjour(); // Appel de la fonction</code></pre>
+                </div>
+
+                <h3>Fonctions avec paramètres</h3>
+                <div class="code-example">
+                    <pre><code>function direBonjour(nom) {
+    console.log("Bonjour " + nom + " !");
+}
+
+direBonjour("Alice"); // "Bonjour Alice !"
+direBonjour("Bob");   // "Bonjour Bob !"</code></pre>
+                </div>
+
+                <h3>Fonctions avec return</h3>
+                <div class="code-example">
+                    <pre><code>function additionner(a, b) {
+    return a + b;
+}
+
+let resultat = additionner(5, 3);
+console.log(resultat); // 8</code></pre>
+                </div>
+
+                <h3>Fonctions fléchées (Arrow Functions)</h3>
+                <div class="code-example">
+                    <pre><code>// Syntaxe classique
+const multiplier = function(a, b) {
+    return a * b;
+};
+
+// Syntaxe fléchée
+const multiplierFleche = (a, b) => a * b;
+
+console.log(multiplierFleche(4, 5)); // 20</code></pre>
+                </div>
+
+                <button onclick="exercice6()">Tester l'exercice 6</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 7 : Tableaux -->
+        <section id="tableaux" class="chapter">
+            <h2>📊 Chapitre 7 : Tableaux (Arrays)</h2>
+            <div class="content">
+                <h3>Créer un tableau</h3>
+                <div class="code-example">
+                    <pre><code>let fruits = ["Pomme", "Banane", "Orange"];
+let nombres = [1, 2, 3, 4, 5];
+let mixte = ["Texte", 42, true];</code></pre>
+                </div>
+
+                <h3>Accéder aux éléments</h3>
+                <div class="code-example">
+                    <pre><code>let fruits = ["Pomme", "Banane", "Orange"];
+
+console.log(fruits[0]); // "Pomme"
+console.log(fruits[1]); // "Banane"
+console.log(fruits.length); // 3</code></pre>
+                </div>
+
+                <h3>Méthodes des tableaux</h3>
+                <div class="code-example">
+                    <pre><code>let fruits = ["Pomme", "Banane"];
+
+// Ajouter à la fin
+fruits.push("Orange");
+
+// Ajouter au début
+fruits.unshift("Fraise");
+
+// Retirer le dernier
+fruits.pop();
+
+// Retirer le premier
+fruits.shift();
+
+console.log(fruits); // ["Pomme", "Banane"]</code></pre>
+                </div>
+
+                <h3>Parcourir un tableau</h3>
+                <div class="code-example">
+                    <pre><code>let fruits = ["Pomme", "Banane", "Orange"];
+
+// Avec for
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// Avec forEach
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});
+
+// Avec for...of
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+                </div>
+
+                <button onclick="exercice7()">Tester l'exercice 7</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 8 : Objets -->
+        <section id="objets" class="chapter">
+            <h2>🎯 Chapitre 8 : Objets</h2>
+            <div class="content">
+                <h3>Créer un objet</h3>
+                <div class="code-example">
+                    <pre><code>let personne = {
+    nom: "Dupont",
+    prenom: "Jean",
+    age: 30,
+    ville: "Paris"
+};</code></pre>
+                </div>
+
+                <h3>Accéder aux propriétés</h3>
+                <div class="code-example">
+                    <pre><code>let personne = {
+    nom: "Dupont",
+    prenom: "Jean",
+    age: 30
+};
+
+// Notation avec point
+console.log(personne.nom); // "Dupont"
+
+// Notation avec crochets
+console.log(personne["prenom"]); // "Jean"</code></pre>
+                </div>
+
+                <h3>Méthodes d'objet</h3>
+                <div class="code-example">
+                    <pre><code>let personne = {
+    nom: "Dupont",
+    prenom: "Jean",
+    age: 30,
+    sePresenter: function() {
+        return "Je m'appelle " + this.prenom + " " + this.nom;
+    }
+};
+
+console.log(personne.sePresenter());
+// "Je m'appelle Jean Dupont"</code></pre>
+                </div>
+
+                <h3>Modifier et ajouter des propriétés</h3>
+                <div class="code-example">
+                    <pre><code>let voiture = {
+    marque: "Renault",
+    modele: "Clio"
+};
+
+// Modifier
+voiture.marque = "Peugeot";
+
+// Ajouter
+voiture.annee = 2020;
+
+console.log(voiture);
+// {marque: "Peugeot", modele: "Clio", annee: 2020}</code></pre>
+                </div>
+
+                <button onclick="exercice8()">Tester l'exercice 8</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 9 : DOM -->
+        <section id="dom" class="chapter">
+            <h2>🌐 Chapitre 9 : Manipulation du DOM</h2>
+            <div class="content">
+                <h3>Qu'est-ce que le DOM ?</h3>
+                <p>Le DOM (Document Object Model) est une représentation de la page HTML que JavaScript peut manipuler.</p>
+
+                <h3>Sélectionner des éléments</h3>
+                <div class="code-example">
+                    <pre><code>// Sélectionner par ID
+let element = document.getElementById("monId");
+
+// Sélectionner par classe
+let elements = document.getElementsByClassName("maClasse");
+
+// Sélectionner par balise
+let paragraphes = document.getElementsByTagName("p");
+
+// Sélecteur CSS (moderne)
+let element = document.querySelector(".maClasse");
+let elements = document.querySelectorAll("p");</code></pre>
+                </div>
+
+                <h3>Modifier le contenu</h3>
+                <div class="code-example">
+                    <pre><code>// Modifier le texte
+let titre = document.querySelector("h1");
+titre.textContent = "Nouveau titre";
+
+// Modifier le HTML
+let div = document.querySelector("div");
+div.innerHTML = "&lt;p&gt;Nouveau contenu&lt;/p&gt;";</code></pre>
+                </div>
+
+                <h3>Modifier le style</h3>
+                <div class="code-example">
+                    <pre><code>let element = document.querySelector(".box");
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+element.style.fontSize = "20px";</code></pre>
+                </div>
+
+                <h3>Ajouter/Retirer des classes</h3>
+                <div class="code-example">
+                    <pre><code>let element = document.querySelector(".box");
+
+// Ajouter une classe
+element.classList.add("active");
+
+// Retirer une classe
+element.classList.remove("active");
+
+// Basculer une classe
+element.classList.toggle("active");</code></pre>
+                </div>
+
+                <div id="demo-dom" style="padding: 20px; background: #f0f0f0; margin: 20px 0; border-radius: 5px;">
+                    <p id="demo-texte">Clique sur le bouton pour me modifier !</p>
+                </div>
+                <button onclick="exercice9()">Tester l'exercice 9</button>
+            </div>
+        </section>
+
+        <!-- Chapitre 10 : Événements -->
+        <section id="evenements" class="chapter">
+            <h2>🖱️ Chapitre 10 : Événements</h2>
+            <div class="content">
+                <h3>Qu'est-ce qu'un événement ?</h3>
+                <p>Les événements sont des actions qui se produisent dans le navigateur (clic, survol, frappe clavier, etc.)</p>
+
+                <h3>Écouter un événement</h3>
+                <div class="code-example">
+                    <pre><code>// Méthode 1 : onclick dans le HTML
+// &lt;button onclick="direBonjour()"&gt;Cliquez&lt;/button&gt;
+
+// Méthode 2 : addEventListener (recommandé)
+let bouton = document.querySelector("#monBouton");
+bouton.addEventListener("click", function() {
+    alert("Bouton cliqué !");
+});</code></pre>
+                </div>
+
+                <h3>Types d'événements courants</h3>
+                <div class="code-example">
+                    <pre><code>// Événements de souris
+element.addEventListener("click", function() {});
+element.addEventListener("dblclick", function() {});
+element.addEventListener("mouseover", function() {});
+element.addEventListener("mouseout", function() {});
+
+// Événements de clavier
+document.addEventListener("keydown", function(e) {
+    console.log("Touche pressée : " + e.key);
+});
+
+// Événements de formulaire
+input.addEventListener("input", function() {});
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Empêche l'envoi
+});</code></pre>
+                </div>
+
+                <h3>L'objet event</h3>
+                <div class="code-example">
+                    <pre><code>bouton.addEventListener("click", function(event) {
+    console.log(event.target); // L'élément cliqué
+    console.log(event.type);   // Type d'événement
+    event.preventDefault();    // Empêcher l'action par défaut
+});</code></pre>
+                </div>
+
+                <div style="margin: 20px 0;">
+                    <button id="demo-event" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                        Clique-moi !
+                    </button>
+                    <p id="compteur-clics">Nombre de clics : 0</p>
+                </div>
+                <button onclick="exercice10()">Tester l'exercice 10</button>
+            </div>
+        </section>
+
+        <!-- Projet Final -->
+        <section id="projet" class="chapter">
+            <h2>🎓 Projet Final : Mini Calculatrice</h2>
+            <div class="content">
+                <p>Maintenant que tu maîtrises les bases, crée une calculatrice simple !</p>
+
+                <div id="calculatrice" style="background: #f5f5f5; padding: 20px; border-radius: 10px; max-width: 300px; margin: 20px auto;">
+                    <input type="text" id="calc-display" readonly style="width: 100%; padding: 10px; font-size: 24px; margin-bottom: 10px; text-align: right;">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+                        <button onclick="ajouterChiffre('7')" class="calc-btn">7</button>
+                        <button onclick="ajouterChiffre('8')" class="calc-btn">8</button>
+                        <button onclick="ajouterChiffre('9')" class="calc-btn">9</button>
+                        <button onclick="definirOperation('/')" class="calc-btn operator">/</button>
+
+                        <button onclick="ajouterChiffre('4')" class="calc-btn">4</button>
+                        <button onclick="ajouterChiffre('5')" class="calc-btn">5</button>
+                        <button onclick="ajouterChiffre('6')" class="calc-btn">6</button>
+                        <button onclick="definirOperation('*')" class="calc-btn operator">*</button>
+
+                        <button onclick="ajouterChiffre('1')" class="calc-btn">1</button>
+                        <button onclick="ajouterChiffre('2')" class="calc-btn">2</button>
+                        <button onclick="ajouterChiffre('3')" class="calc-btn">3</button>
+                        <button onclick="definirOperation('-')" class="calc-btn operator">-</button>
+
+                        <button onclick="ajouterChiffre('0')" class="calc-btn">0</button>
+                        <button onclick="effacer()" class="calc-btn">C</button>
+                        <button onclick="calculer()" class="calc-btn operator">=</button>
+                        <button onclick="definirOperation('+')" class="calc-btn operator">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🎉 Félicitations ! Tu as terminé le cours JavaScript pour débutants !</p>
+        <p>Continue à pratiquer et à créer des projets pour progresser.</p>
+    </footer>
+
+    <script src="cours.js"></script>
 </body>
 </html>
